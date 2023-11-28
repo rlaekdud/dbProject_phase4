@@ -1,0 +1,15 @@
+
+.metadata/
+*.policy
+*.prefs
+*.name
+*.properties
+*.container
+Knuflix_web/.settings/
+*.component
+Knuflix_web/.classpath
+*.ini
+*.xml
+*.index
+Knuflix_web/.project
+Servers/.project
