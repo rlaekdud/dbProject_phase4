@@ -9,7 +9,7 @@
 <body>
     <h1><< KNUFLIX >></h1>
     <h2>Modify Password</h2>
-    <form action="/Knuflix_web/UserMenu/ModifyPasswordView.jsp" method="post">
+    <form action="/UserMenu/ModifyPasswordView.jsp" method="post">
         <label for="currentPassword"> Current Password : </label>
         <input type="password" name="currentPassword" id="currentPassword" required>
         <br><br>

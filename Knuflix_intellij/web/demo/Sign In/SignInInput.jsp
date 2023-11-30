@@ -9,7 +9,7 @@
 <body>
     <h1><< KNUFLIX >></h1>
     <h2>Sign In</h2>
-    <form action="/Knuflix_web/UserMenu/SignInView.jsp" method="post">
+    <form action="/UserMenu/SignInView.jsp" method="post">
         <label for="userId"> User ID : </label>
         <input type="text" name="userId" id="userId" required>
         <br><br>
