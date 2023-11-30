@@ -7,29 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>KNUFLIX</title>
-<style>
-    body {
-        background-color: #f0f0f0;
-        font-family: Arial, sans-serif;
-    }
-    h1 {
-        color: #333;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    th, td {
-        padding: 15px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-    th {
-        background-color: #4CAF50;
-        color: white;
-    }
-    tr:hover {background-color: #f5f5f5;}
-</style>
 </head>
 <body>
     <%
