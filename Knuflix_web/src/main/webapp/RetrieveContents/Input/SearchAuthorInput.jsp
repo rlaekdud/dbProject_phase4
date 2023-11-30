@@ -7,7 +7,7 @@
 <title>KNUFLIX</title>
 </head>
 <body>
-    <h1><< KNUFLIX >></h1>
+    <h1>[ KNUFLIX ]</h1>
     <h2>E-Book Inquiry</h2>
     <form action="/Knuflix_web/RetrieveContents/View/SearchAuthorView.jsp">
         <label for="job"> Author Job : </label>

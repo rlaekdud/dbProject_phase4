@@ -7,7 +7,7 @@
 <title>KNUFLIX</title>
 </head>
 <body>
-    <h1><< KNUFLIX >></h1>
+    <h1> [ KNUFLIX ] </h1>
     <h2>Contents Inquiry</h2>
     <form action="/Knuflix_web/RetrievePlatform/View/SearchPriceView.jsp">
         <label for="pname"> Platform name : </label> 
