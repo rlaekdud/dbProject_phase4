@@ -33,10 +33,12 @@
       <div class="title">내 정보 수정</div>
       <div class="desc-string">비밀번호 변경만 가능합니다.</div>
       <div class="pw-box">
-        <a href="ModifyPw2.jsp"><div class="next-button"><dev class="modify-pw-string">비밀번호 확인</dev></div></a>
-        <div class="pw-input">
-          <input class="input-field" type="password" placeholder="기존 비밀번호" id="formerPw" name="formerPw">
-        </div>
+        <form action="ModifyPw2.jsp">
+          <button class="next-button" type="submit"><dev class="modify-pw-string">비밀번호 확인</dev></button>
+          <div class="pw-input">
+            <input class="input-field" type="password" placeholder="기존 비밀번호" id="formerPw" name="formerPw">
+          </div>
+        </form>
       </div>
 
       <div class="search-my-party">

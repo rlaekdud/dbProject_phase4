@@ -27,13 +27,15 @@
             <div class="sign-up-box">
                 <div class="overlap-group">
                     <div class="text-wrapper">회원 가입</div>
-                    <a href="SignUp3.jsp"><div class="next-button"><div class="div">계속</div></div></a>
-                    <div class="id-input">
-                        <input class="input-field" type="text" placeholder="이름을 입력하세요." id="id" name="id">
+                    <form action="SignUp3.jsp">
+                        <button class="next-button" type="submit"><div class="div">계속</div></button>
+                        <div class="id-input">
+                            <input class="input-field" type="text" placeholder="이름을 입력하세요." id="id" name="id">
                         </div>
-                    <div class="pw-input">
-                        <input class="input-field" type="text" placeholder="전화번호를 입력하세요." id="pw" name="pw">
-                    </div>
+                        <div class="pw-input">
+                            <input class="input-field" type="text" placeholder="전화번호를 입력하세요." id="pw" name="pw">
+                        </div>
+                    </form>
                     <div class="go-sign-in">
                         <div class="overlap-2">
                             <div class="text-wrapper-4">이미 계정이 있으신가요?</div>

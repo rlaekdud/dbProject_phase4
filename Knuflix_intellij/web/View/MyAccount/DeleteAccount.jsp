@@ -33,10 +33,12 @@
       <div class="title">계정 삭제</div>
       <div class="desc-string-warning">계정은 삭제 후 복구할 수 없습니다.</div>
       <div class="pw-box">
-        <a href="ModifyPw2.jsp"><div class="next-button"><dev class="modify-pw-string">계정 삭제</dev></div></a>
-        <div class="pw-input">
-          <input class="input-field" type="password" placeholder="비밀번호를 입력하세요." id="formerPw" name="formerPw">
-        </div>
+        <form action="/View/Home/Home.jsp">
+          <button class="next-button"><dev class="modify-pw-string">계정 삭제</dev></button>
+          <div class="pw-input">
+            <input class="input-field" type="password" placeholder="비밀번호를 입력하세요." id="formerPw" name="formerPw">
+          </div>
+        </form>
       </div>
 
       <div class="search-my-party">

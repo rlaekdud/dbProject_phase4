@@ -27,13 +27,15 @@
             <div class="sign-up-box">
                 <div class="overlap-group">
                     <div class="text-wrapper">결제 정보 입력</div>
-                    <a href="/View/Home/Home.jsp"><div class="next-button"><div class="div">회원가입 완료</div></div></a>
-                    <div class="id-input">
-                        <input class="input-field" type="text" placeholder="은행명" id="id" name="id">
+                    <form action="/View/Home/Home.jsp">
+                        <button class="next-button" type="submit"><div class="div">회원가입 완료</div></button>
+                        <div class="id-input">
+                            <input class="input-field" type="text" placeholder="은행명" id="id" name="id">
                         </div>
-                    <div class="pw-input">
-                        <input class="input-field" type="text" placeholder="계좌번호" id="pw" name="pw">
-                    </div>
+                        <div class="pw-input">
+                            <input class="input-field" type="text" placeholder="계좌번호" id="pw" name="pw">
+                        </div>
+                    </form>
                     <div class="go-sign-in">
                         <div class="overlap-2">
                             <div class="text-wrapper-4">이미 계정이 있으신가요?</div>

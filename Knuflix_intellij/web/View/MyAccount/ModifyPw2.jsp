@@ -33,13 +33,15 @@
       <div class="title">비밀번호 재설정</div>
       <div class="desc-string">새로 사용할 비밀번호를 입력해주세요.</div>
       <div class="new-pw-box">
-        <a href="/View/Home/Home_SignedIn.jsp"><div class="modify-pw-button"><dev class="modify-pw-string">비밀번호 재설정</dev></div></a>
-        <div class="pw-input-1">
-          <input class="input-field" type="password" placeholder="새로운 비밀번호를 입력하세요." id="pw1" name="pw1">
-        </div>
-        <div class="pw-input-2">
-          <input class="input-field" type="password" placeholder="비밀번호를 한번 더 입력하세요." id="pw2" name="pw2">
-        </div>
+        <form action="/View/Home/Home_SignedIn.jsp">
+          <button class="modify-pw-button" type="submit"><dev class="modify-pw-string">비밀번호 재설정</dev></button>
+          <div class="pw-input-1">
+            <input class="input-field" type="password" placeholder="새로운 비밀번호를 입력하세요." id="pw1" name="pw1">
+          </div>
+          <div class="pw-input-2">
+            <input class="input-field" type="password" placeholder="비밀번호를 한번 더 입력하세요." id="pw2" name="pw2">
+          </div>
+        </form>
       </div>
 
       <div class="search-my-party">
