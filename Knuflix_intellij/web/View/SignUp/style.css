@@ -1,4 +1,4 @@
-.sign-in {
+.sign-up {
     background-color: #000000;
     display: flex;
     flex-direction: row;
@@ -6,19 +6,19 @@
     width: 100%;
 }
 
-.sign-in .overlap-wrapper {
+.sign-up .overlap-wrapper {
     background-color: #000000;
     width: 1728px;
     height: 1117px;
 }
 
-.sign-in .overlap {
+.sign-up .overlap {
     position: relative;
     height: 926px;
     top: 46px;
 }
 
-.sign-in .main-logo {
+.sign-up .main-logo {
     position: absolute;
     width: 164px;
     height: 57px;
@@ -27,7 +27,7 @@
     object-fit: cover;
 }
 
-.sign-in .background-poster {
+.sign-up .background-poster {
     position: absolute;
     width: 1728px;
     height: 690px;
@@ -36,7 +36,7 @@
     opacity: 0.7;
 }
 
-.sign-in .poster {
+.sign-up .poster {
     position: absolute;
     width: 298px;
     height: 690px;
@@ -45,7 +45,7 @@
     object-fit: cover;
 }
 
-.sign-in .img {
+.sign-up .img {
     position: absolute;
     width: 298px;
     height: 690px;
@@ -54,7 +54,7 @@
     object-fit: cover;
 }
 
-.sign-in .poster-2 {
+.sign-up .poster-2 {
     position: absolute;
     width: 299px;
     height: 690px;
@@ -63,7 +63,7 @@
     object-fit: cover;
 }
 
-.sign-in .poster-3 {
+.sign-up .poster-3 {
     position: absolute;
     width: 298px;
     height: 690px;
@@ -72,7 +72,7 @@
     object-fit: cover;
 }
 
-.sign-in .poster-4 {
+.sign-up .poster-4 {
     position: absolute;
     width: 327px;
     height: 690px;
@@ -81,7 +81,7 @@
     object-fit: cover;
 }
 
-.sign-in .sign-in-box {
+.sign-up .sign-up-box {
     position: absolute;
     width: 465px;
     height: 722px;
@@ -89,7 +89,7 @@
     left: 632px;
 }
 
-.sign-in .overlap-group {
+.sign-up .overlap-group {
     position: relative;
     width: 463px;
     height: 722px;
@@ -97,9 +97,9 @@
     border-radius: 10px;
 }
 
-.sign-in .text-wrapper {
+.sign-up .text-wrapper {
     position: absolute;
-    width: 103px;
+    width: 122px;
     top: 83px;
     left: 66px;
     font-family: "Helvetica Neue-Medium", Helvetica;
@@ -111,7 +111,7 @@
     line-height: normal;
 }
 
-.sign-in .sign-in-button {
+.sign-up .next-button {
     display: flex;
     width: 331px;
     height: 61px;
@@ -126,7 +126,7 @@
     border-radius: 5px;
 }
 
-.sign-in .div {
+.sign-up .div {
     position: relative;
     width: fit-content;
     font-family: "Helvetica Neue-Medium", Helvetica;
@@ -137,7 +137,7 @@
     line-height: normal;
 }
 
-.sign-in .id-input {
+.sign-up .id-input {
     position: absolute;
     width: 333px;
     height: 69px;
@@ -145,7 +145,7 @@
     left: 66px;
 }
 
-.sign-in .div-wrapper {
+.sign-up .div-wrapper {
     position: relative;
     width: 331px;
     height: 69px;
@@ -153,9 +153,30 @@
     border-radius: 5px;
 }
 
-.sign-in .text-wrapper-2 {
+.sign-up .text-wrapper-2 {
     position: absolute;
-    width: 126px;
+    width: 193px;
+    top: 24px;
+    left: 25px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    color: #9a9a9a;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.sign-up .pw-input {
+    position: absolute;
+    width: 333px;
+    height: 69px;
+    top: 282px;
+    left: 66px;
+}
+
+.sign-up .text-wrapper-3 {
+    position: absolute;
+    width: 177px;
     top: 23px;
     left: 25px;
     font-family: "Helvetica Neue-Medium", Helvetica;
@@ -166,15 +187,7 @@
     line-height: normal;
 }
 
-.sign-in .pw-input {
-    position: absolute;
-    width: 333px;
-    height: 69px;
-    top: 282px;
-    left: 66px;
-}
-
-.sign-in .go-sign-up {
+.sign-up .go-sign-in {
     position: absolute;
     width: 334px;
     height: 25px;
@@ -182,7 +195,13 @@
     left: 65px;
 }
 
-.sign-in .text-wrapper-3 {
+.sign-up .overlap-2 {
+    position: relative;
+    width: 330px;
+    height: 25px;
+}
+
+.sign-up .text-wrapper-4 {
     position: absolute;
     width: 190px;
     top: 0;
@@ -195,11 +214,11 @@
     line-height: normal;
 }
 
-.sign-in .text-wrapper-4 {
+.sign-up .text-wrapper-5 {
     position: absolute;
-    width: 132px;
+    width: 147px;
     top: 0;
-    left: 198px;
+    left: 183px;
     font-family: "Helvetica Neue-Light", Helvetica;
     font-weight: 300;
     color: #ffffff;
@@ -209,7 +228,21 @@
     line-height: normal;
 }
 
-.sign-in .input-field {
+.sign-up .text-wrapper-6 {
+    position: absolute;
+    width: 117px;
+    top: 269px;
+    left: 698px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 15px;
+    white-space: nowrap;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.sign-up .input-field {
     position: relative;
     width: 331px;
     height: 69px;
