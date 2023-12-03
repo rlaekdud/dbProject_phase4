@@ -40,7 +40,6 @@
         result.append("</table>");
 
         session.setAttribute("pname", pname);
-
         session.setAttribute("result", result.toString());
         response.sendRedirect("/FE/Contents/SearchPnameAll/PnameAllView.jsp");
 

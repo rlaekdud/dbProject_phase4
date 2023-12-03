@@ -6,14 +6,14 @@ import java.sql.*;
 
 public class Repository {
     private final String serverIP = "localhost";
-    private final String strSID = "xe";
-    private final String portNum = "11521";
-    private final String id = "platform";
-    private final String pw = "platform";
+    private final String strSID = "orcl";
+    private final String portNum = "1521";
+    private final String id = "seven";
+    private final String pw = "eleven";
     private final String url = "jdbc:oracle:thin:@"+serverIP+":"+portNum+":"+strSID;
 
-    private PreparedStatement pstmt;
     private Connection conn;
+    private PreparedStatement pstmt;
 
     private StringBuilder result = new StringBuilder();
 
@@ -70,7 +70,7 @@ public class Repository {
         return rs;
     }
 
-    public void exeUpdate() {
+    public void execUpdate() {
         try {
             pstmt.executeUpdate();
             conn.commit();
