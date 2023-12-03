@@ -16,6 +16,8 @@
     Repository repository = new Repository();
 
     try {
+        repository.initPstmt(query);
+
         ResultSet rs = repository.getQueryResult();
 
         StringBuilder result = repository.getResult();
