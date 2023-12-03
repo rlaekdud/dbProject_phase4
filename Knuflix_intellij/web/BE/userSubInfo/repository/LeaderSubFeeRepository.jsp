@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="user.UserDto" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,7 @@
                 + "WHERE U.User_id = A.Leader_id "
                 + "AND A.Pltf_name = F.Pltf_name "
                 + "AND U.User_id = ?";
-    String userID = request.getParameter("userID");
+    String userID = UserDto.userID;
 
     try {
         Class.forName("oracle.jdbc.driver.OracleDriver");

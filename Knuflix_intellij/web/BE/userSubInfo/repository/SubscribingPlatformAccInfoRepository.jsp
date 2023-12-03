@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="user.UserDto" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,7 @@
                 + "OR Party_ID IN (SELECT Party_id "
                                 + "FROM PARTICIPATE "
                                 + "WHERE User_id = ?)";
-    String userID = request.getParameter("userID");
+    String userID = UserDto.userID;
 
     try {
         Class.forName("oracle.jdbc.driver.OracleDriver");
