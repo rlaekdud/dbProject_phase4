@@ -34,7 +34,7 @@
             <div class="desc-string">입력한 직업을 가진 작가가 집필한 책을 검색합니다.</div>
             <div class="job-string">작가의 직업을 입력하세요.</div>
             <div class="input-form">
-                <form action="AuthorJobView.jsp">
+                <form action="/BE/ebook/repository/AuthorJobRepository.jsp">
                     <input class="job-input" type="text" id="job" name="job">
                     <button type="submit" class="search-button">검색하기</button>
                 </form>

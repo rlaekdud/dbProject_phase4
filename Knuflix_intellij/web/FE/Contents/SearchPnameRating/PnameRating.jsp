@@ -36,7 +36,7 @@
             <div class="pname-string">플랫폼을 선택하세요.</div>
             <div class="rating-string">평점을 선택하세요.</div>
             <div class="input-form">
-                <form action="PnameRatingView.jsp">
+                <form action="/BE/content/repository/OTTRatingRepository.jsp">
                     <select class="pname-input" id="pname" name="pname">
                         <option value="Disney+" selected>Disney+</option>
                         <option value="Netflix">Netflix</option>

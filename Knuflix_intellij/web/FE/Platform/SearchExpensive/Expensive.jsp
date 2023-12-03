@@ -34,7 +34,7 @@
             <div class="desc-string">선택한 플랫폼보다 비싼 가격 정책을 가진 플랫폼을 검색합니다.</div>
             <div class="pname-string">플랫폼을 선택하세요.</div>
             <div class="input-form">
-                <form action="ExpensiveView.jsp">
+                <form action="/BE/platform/repository/ExpensiveRepository.jsp">
                     <select class="pname-input" id="pname" name="pname">
                         <option value="Disney+" selected>Disney+</option>
                         <option value="Netflix">Netflix</option>
