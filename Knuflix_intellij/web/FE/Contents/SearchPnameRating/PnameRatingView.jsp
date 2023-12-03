@@ -33,7 +33,7 @@
                 session = request.getSession();
                 String result = (String)session.getAttribute("result");
             %>
-            <div class="title">{플랫폼명}의 모든 컨텐츠 조회</div>
+            <div class="title">{플랫폼명}의 {평점} 이상인 컨텐츠 조회</div>
             <div class="table">
                 <%
                     out.println(result);

@@ -17,6 +17,37 @@ a {
   text-decoration: none;
 }
 
+table {
+  position: absolute;
+  width: 874px;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #ffffff;
+  color: white;
+
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+th {
+  font-family: "Helvetica Neue-Bold", Helvetica;
+  font-size: 17px;
+  text-align: center;
+  padding: 8px;
+}
+
+tr {
+  border: 1px solid #dddddd;
+}
+
+td {
+  font-family: "Helvetica Neue-Medium", Helvetica;
+  font-size: 17px;
+  border: 1px solid #ddd;
+  padding: 15px 30px;
+}
+
 @font-face {
   font-family: "Helvetica Neue-Medium";
   src: url("https://anima-uploads.s3.amazonaws.com/projects/63dcde9badcdfbdea71f504c/fonts/helveticaneuemed.ttf")

@@ -31,6 +31,12 @@
     left: 0;
 }
 
+.search-genre-rating .empty {
+    background-color: black;
+    width: 1728px;
+    height: 50px;
+}
+
 .search-genre-rating .main-logo {
     position: absolute;
     width: 164px;
