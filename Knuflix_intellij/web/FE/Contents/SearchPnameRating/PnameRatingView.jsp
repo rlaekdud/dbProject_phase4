@@ -29,8 +29,16 @@
                     </div>
                 </div>
             </div>
+            <%
+                session = request.getSession();
+                String result = (String)session.getAttribute("result");
+            %>
             <div class="title">{플랫폼명}의 {평점} 이상인 컨텐츠 조회</div>
-            <div class="table"></div>
+            <div class="table">
+                <%
+                    out.println(result);
+                %>
+            </div>
 
             <div class="search-my-party">
                 <div class="dropdown">
@@ -57,7 +65,7 @@
                     <button class="dropbtn">e-book 검색</button>
                     <div class="dropdown-content">
                         <a href="/FE/Ebook/SearchAuthorJob/AuthorJob.jsp">작가 직업으로 검색</a>
-                        <a href="/FE/Ebook/SearchYear/Year.jsp">출판연도 순으로 조회</a>
+                        <a href="/BE/ebook/repository/PublishYearRepository.jsp">출판연도 순으로 조회</a>
                     </div>
                 </div>
             </div>
@@ -72,6 +80,7 @@
             </div>
         </div>
     </div>
+    <div class="empty"></div>
 </div>
 </body>
 </html>

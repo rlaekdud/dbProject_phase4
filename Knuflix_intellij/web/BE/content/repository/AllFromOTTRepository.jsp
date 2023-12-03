@@ -15,6 +15,7 @@
                 + "WHERE P.Pltf_name = S.Pltf_name "
                 + "AND S.Content_id = C.Content_id "
                 + "AND P.Pltf_name = ?";
+
     String pname = request.getParameter("pname");
 
     Repository repository = new Repository();
@@ -39,6 +40,7 @@
         result.append("</table>");
 
         session.setAttribute("pname", pname);
+
         session.setAttribute("result", result.toString());
         response.sendRedirect("/FE/Contents/SearchPnameAll/PnameAllView.jsp");
 

@@ -31,6 +31,15 @@
             </div>
             <div class="title">{플랫폼명}보다 가격 정책이 비싼 플랫폼</div>
             <div class="desc-string">선택한 플랫폼보다 비싼 가격 정책을 가진 플랫폼을 조회합니다.</div>
+            <%
+                session = request.getSession();
+                String result = (String)session.getAttribute("result");
+            %>
+            <div class="table">
+                <%
+                    out.println(result);
+                %>
+            </div>
             <div class="table"></div>
 
             <div class="search-my-party">
@@ -58,7 +67,7 @@
                     <button class="dropbtn">e-book 검색</button>
                     <div class="dropdown-content">
                         <a href="/FE/Ebook/SearchAuthorJob/AuthorJob.jsp">작가 직업으로 검색</a>
-                        <a href="/FE/Ebook/SearchYear/Year.jsp">출판연도 순으로 조회</a>
+                        <a href="/BE/ebook/repository/PublishYearRepository.jsp">출판연도 순으로 조회</a>
                     </div>
                 </div>
             </div>
