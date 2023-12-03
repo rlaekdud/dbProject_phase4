@@ -31,22 +31,21 @@
 
         if (rs == null) {
             response.sendRedirect("/FE/MyParty/SearchMyPInfo/MyPInfo_NoShare.jsp");
+        } else {
+            StringBuilder result = repository.getResult();
+
+            while(rs.next()) {
+                result.append("<tr>");
+                result.append("<td>").append(rs.getString(1)).append("</td>");
+                result.append("<td>").append(rs.getString(2)).append("</td>");
+                result.append("<td>").append(rs.getString(3)).append("</td>");
+                result.append("</tr>");
+            }
+            result.append("</table>");
+
+            session.setAttribute("result", result.toString());
+            response.sendRedirect("/FE/MyParty/SearchMyPInfo/MyPInfo.jsp");
         }
-
-        StringBuilder result = repository.getResult();
-
-        while(rs.next()) {
-            result.append("<tr>");
-            result.append("<td>").append(rs.getString(1)).append("</td>");
-            result.append("<td>").append(rs.getString(2)).append("</td>");
-            result.append("<td>").append(rs.getString(3)).append("</td>");
-            result.append("</tr>");
-        }
-        result.append("</table>");
-
-        session.setAttribute("result", result.toString());
-        response.sendRedirect("/FE/MyParty/SearchMyPInfo/MyPInfo.jsp");
-
     } catch(SQLException e) {
         out.println("[Error] SQL error");
     }

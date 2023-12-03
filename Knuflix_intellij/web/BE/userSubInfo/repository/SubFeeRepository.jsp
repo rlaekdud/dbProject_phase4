@@ -76,18 +76,19 @@
 
     if (resultL == null) {
         if (resultM == null) {
-            response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_NoParty.jsp");   // no result
+            response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_NoParty.jsp");       // no result
+        } else {
+            session.setAttribute("resultMember", resultM.toString());
+            response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_OnlyMember.jsp");    // no leader
         }
-        session.setAttribute("resultMember", resultM.toString());
-        response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_OnlyMember.jsp");    // no leader
     } else if (resultM == null) {
         session.setAttribute("resultLeader", resultL.toString());
-        response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_OnlyLeader.jsp");    // no member
+        response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_OnlyLeader.jsp");        // no member
+    } else {
+        session.setAttribute("resultLeader", resultL.toString());
+        session.setAttribute("resultMember", resultM.toString());
+        response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee.jsp");                   // basic flow
     }
-
-    session.setAttribute("resultLeader", resultL.toString());
-    session.setAttribute("resultMember", resultM.toString());
-    response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee.jsp");
 %>
 </body>
 </html>

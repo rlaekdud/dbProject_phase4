@@ -31,21 +31,20 @@
 
         if (rs == null) {
             response.sendRedirect("/FE/MyParty/SearchMySub/MySub_NoSub.jsp");
+        } else {
+            StringBuilder result = new StringBuilder();
+
+            while(rs.next()) {
+                result.append("<tr>");
+                result.append("<td>").append(rs.getString(1)).append("</td>");
+                result.append("<td>").append(rs.getDouble(2)).append("</td>");
+                result.append("</tr>");
+            }
+            result.append("</table>");
+
+            session.setAttribute("result", result.toString());
+            response.sendRedirect("/FE/MyParty/SearchMySub/MySub.jsp");
         }
-
-        StringBuilder result = new StringBuilder();
-
-        while(rs.next()) {
-            result.append("<tr>");
-            result.append("<td>").append(rs.getString(1)).append("</td>");
-            result.append("<td>").append(rs.getDouble(2)).append("</td>");
-            result.append("</tr>");
-        }
-        result.append("</table>");
-
-        session.setAttribute("result", result.toString());
-        response.sendRedirect("/FE/MyParty/SearchMySub/MySub.jsp");
-
     } catch(SQLException e) {
         out.println("[Error] SQL error");
     }

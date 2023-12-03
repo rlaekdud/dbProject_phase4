@@ -30,25 +30,24 @@
 
         if (rs == null) {
             response.sendRedirect("/FE/Ebook/SearchAuthorJob/AuthorJobView_NoSuchJob.jsp");
+        } else {
+            StringBuilder result = repository.getResult();
+
+            while(rs.next()) {
+                result.append("<tr>");
+                result.append("<td>").append(rs.getString(1)).append("</td>");
+                result.append("<td>").append(rs.getString(2)).append("</td>");
+                result.append("<td>").append(rs.getString(3)).append("</td>");
+                result.append("<td>").append(rs.getString(4)).append("</td>");
+                result.append("<td>").append(rs.getString(5)).append("</td>");
+                result.append("</tr>");
+            }
+            result.append("</table>");
+
+            session.setAttribute("job", job);
+            session.setAttribute("result", result.toString());
+            response.sendRedirect("/FE/Ebook/SearchAuthorJob/AuthorJobView.jsp");
         }
-
-        StringBuilder result = repository.getResult();
-
-        while(rs.next()) {
-            result.append("<tr>");
-            result.append("<td>").append(rs.getString(1)).append("</td>");
-            result.append("<td>").append(rs.getString(2)).append("</td>");
-            result.append("<td>").append(rs.getString(3)).append("</td>");
-            result.append("<td>").append(rs.getString(4)).append("</td>");
-            result.append("<td>").append(rs.getString(5)).append("</td>");
-            result.append("</tr>");
-        }
-        result.append("</table>");
-
-        session.setAttribute("job", job);
-        session.setAttribute("result", result.toString());
-        response.sendRedirect("/FE/Ebook/SearchAuthorJob/AuthorJobView.jsp");
-
     } catch(SQLException e) {
         out.println("[Error] SQL error");
     }
