@@ -13,14 +13,12 @@
     SignUpService signUpService = new SignUpService();
 
     if (signUpService.isIdRedundant(id)) {
-        response.sendRedirect("/FE/SignUp/SignUp1Error.jsp");//todo:check
+        response.sendRedirect("/FE/SignUp/SignUp1Error.jsp");
     } else {
-        request.setAttribute("id", id);
-        request.setAttribute("pw", pw);
-        // transfer data to last page
-        request.getRequestDispatcher("/BE/user/controller/SignUp3Controller.jsp").forward(request, response);
+        session.setAttribute("id", id);
+        session.setAttribute("pw", pw);
 
-        response.sendRedirect("/FE/SignUp/SignUp2.jsp");//todo:check
+        response.sendRedirect("/FE/SignUp/SignUp2.jsp");
     }
 %>
 </body>

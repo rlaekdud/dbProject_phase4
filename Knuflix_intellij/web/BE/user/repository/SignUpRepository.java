@@ -1,5 +1,7 @@
 package BE.user.repository;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import repository.Repository;
 
 public class SignUpRepository {
@@ -21,8 +23,24 @@ public class SignUpRepository {
 
     public void insertUser() {
         Repository repository = new Repository();
-        String query = String.format("INSERT INTO USERS VALUES (%s, %s, %s, %s, %s, %s)", id, pw, name, phone, bank, accnum);
+        String query = "INSERT INTO USERS VALUES (?, ?, ?, ?, ?, ?)";
 
-        repository.execInsert(query);
+        try {
+            PreparedStatement pstmt = repository.initPstmt(query);
+            pstmt.setString(1, id);
+            pstmt.setString(2, pw);
+            pstmt.setString(3, name);
+            pstmt.setString(4, phone);
+            pstmt.setString(5, bank);
+            pstmt.setString(6, accnum);
+            repository.setPstmt(pstmt);
+
+            repository.execUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        repository.execUpdate();
     }
 }

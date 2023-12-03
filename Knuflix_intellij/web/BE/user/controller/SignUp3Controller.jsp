@@ -13,18 +13,18 @@
 
     SignUpService signUpService = new SignUpService();
 
-    String id = (String)request.getAttribute("id");
-    String pw = (String)request.getAttribute("pw");
-    String name = (String)request.getAttribute("name");
-    String phone = (String)request.getAttribute("phone");
+    String id = (String)session.getAttribute("id");
+    String pw = (String)session.getAttribute("pw");
+    String name = (String)session.getAttribute("name");
+    String phone = (String)session.getAttribute("phone");
 
     if (signUpService.isIdRedundant(id)) {
-        response.sendRedirect("/FE/SignUp/SignUp1Error.jsp");//todo:check
+        response.sendRedirect("/FE/SignUp/SignUp1Error.jsp");
     } else {
         SignUpRepository signUpRepository = new SignUpRepository(id, pw, name, phone, bank, accnum);
         signUpRepository.insertUser();
 
-        response.sendRedirect("/FE/Home/Home.jsp");//todo:check
+        response.sendRedirect("/FE/Home/Home.jsp");
     }
 %>
 </body>

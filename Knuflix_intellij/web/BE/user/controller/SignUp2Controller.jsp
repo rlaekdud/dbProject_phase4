@@ -12,15 +12,13 @@
 
     SignUpService signUpService = new SignUpService();
 
-    if (signUpService.isValidPhoneNumber(phone)) {
-        response.sendRedirect("/FE/SignUp/SignUp2Error.jsp");//todo:check
+    if (!signUpService.isValidPhoneNumber(phone)) {
+        response.sendRedirect("/FE/SignUp/SignUp2Error.jsp");
     } else {
-        request.setAttribute("name", name);
-        request.setAttribute("phone", phone);
-        // transfer data to last page
-        request.getRequestDispatcher("/BE/user/controller/SignUp3Controller.jsp").forward(request, response);
+        session.setAttribute("name", name);
+        session.setAttribute("phone", phone);
 
-        response.sendRedirect("/FE/SignUp/SignUp3.jsp");//todo:check
+        response.sendRedirect("/FE/SignUp/SignUp3.jsp");
     }
 %>
 </body>
