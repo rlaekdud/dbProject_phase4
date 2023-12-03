@@ -13,6 +13,7 @@ public class Repository {
     private final String url = "jdbc:oracle:thin:@"+serverIP+":"+portNum+":"+strSID;
 
     private PreparedStatement pstmt;
+    private Connection conn;
 
     private StringBuilder result = new StringBuilder();
 
@@ -34,7 +35,7 @@ public class Repository {
 
     public PreparedStatement initPstmt(String query) {
         try {
-            Connection conn = DriverManager.getConnection(url, id, pw);
+            conn = DriverManager.getConnection(url, id, pw);
             pstmt = conn.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                                                     // TYPE_SCROLL_INSENSITIVE: ResultSet이 생성된 후에 데이터베이스에서 데이터가 변경되더라도 ResultSet에는 그 변경사항이 반영되지 않음
                                                     // to use rs.previous()
@@ -67,5 +68,15 @@ public class Repository {
             out.println("[Error] SQL error");
         }
         return rs;
+    }
+
+    public void exeUpdate() {
+        try {
+            pstmt.executeUpdate();
+            conn.commit();
+
+        } catch (SQLException e) {
+            out.println("[Error] SQL error");
+        }
     }
 }

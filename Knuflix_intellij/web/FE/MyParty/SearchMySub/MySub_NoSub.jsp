@@ -18,7 +18,7 @@
 <div class="my-sub">
     <div class="div">
         <div class="overlap">
-            <a href="/FE/Home/Home_SignedIn.jsp"><img class="main-logo" src="/img/main-logo.png" /></a>
+            <a href="/FE/Home/Home_SignIn.jsp"><img class="main-logo" src="/img/main-logo.png" /></a>
             <div class="my-account-button">
                 <div class="dropdown">
                     <button class="dropbtn"><img class="user-icon" src="/img/user-icon-1.png" /> <img class="polygon" src="/img/polygon-1.svg" /></button>

@@ -28,7 +28,7 @@
             <div class="sign-in-box">
                 <div class="overlap-group">
                     <div class="text-wrapper">로그인</div>
-                    <form action="/FE/Home/Home_SignedIn.jsp">
+                    <form action="/BE/SignInService/SignInService.jsp">
                         <button class="sign-in-button" type="submit"><div class="div">로그인</div></button>
                         <div class="id-input">
                             <input class="input-field" type="text" placeholder="아이디" id="id" name="id">
