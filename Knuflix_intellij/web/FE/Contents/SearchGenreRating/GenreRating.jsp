@@ -38,7 +38,7 @@
             <div class="input-form">
                 <form action="/BE/content/repository/GenreRatingRepository.jsp">
                     <select class="genre-input" id="genre" name="genre">
-                        <option value="Horror" selected>Horror+</option>
+                        <option value="Horror" selected>Horror</option>
                         <option value="Romcom">Romcom</option>
                         <option value="SF">SF</option>
                         <option value="Disaster">Disaster</option>
@@ -97,7 +97,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">플랫폼 검색</button>
                     <div class="dropdown-content">
-                        <a href="/FE/Platform/SearchPopularity/Popularity.jsp">인기 순 조회</a>
+                        <a href="/BE/platform/repository/PartyNumRepository.jsp">인기 순 조회</a>
                         <a href="/FE/Platform/SearchExpensive/Expensive.jsp">플랫폼별 비교 조회</a>
                     </div>
                 </div>

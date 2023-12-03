@@ -63,7 +63,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">플랫폼 검색</button>
                     <div class="dropdown-content">
-                        <a href="/FE/Platform/SearchPopularity/Popularity.jsp">인기 순 조회</a>
+                        <a href="/BE/platform/repository/PartyNumRepository.jsp">인기 순 조회</a>
                         <a href="/FE/Platform/SearchExpensive/Expensive.jsp">플랫폼별 비교 조회</a>
                     </div>
                 </div>
@@ -72,8 +72,13 @@
             <%
                 session = request.getSession();
                 String result = (String)session.getAttribute("result");
+                String pname = (String) session.getAttribute("pname");
             %>
-            <div class="title">{플랫폼명}의 모든 컨텐츠 조회</div>
+            <div class="title">
+                <%
+                    out.print(pname+"의 모든 컨텐츠 조회");
+                %>
+            </div>
             <div class="table">
                 <%
                     out.println(result);

@@ -11,6 +11,8 @@
     width: 1728px;
     height: 1117px;
     position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .search-year .empty {
@@ -319,7 +321,7 @@ td {
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
-    max-width: 200;
+    max-width: 200px;
 }
 
 .dropdown-content a{

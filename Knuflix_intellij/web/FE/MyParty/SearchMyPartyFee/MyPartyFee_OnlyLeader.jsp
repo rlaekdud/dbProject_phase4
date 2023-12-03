@@ -32,7 +32,15 @@
             <div class="title">내 파티의 구독료</div>
             <div class="no-member-string">아직 멤버로 참여 중인 파티가 없습니다.</div>
             <div class="leader-title">내가 리더인 파티</div>
-            <div class="leader-table"></div>
+            <%
+                session = request.getSession();
+                String resultLeader = (String)session.getAttribute("resultLeader");
+            %>
+            <div class="leader-table">
+                <%
+                    out.println(resultLeader);
+                %>
+            </div>
             <p class="sub-fee-string">이번 달의 구독료는 __원입니다.</p>
 
             <div class="search-my-party">
@@ -68,7 +76,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">플랫폼 검색</button>
                     <div class="dropdown-content">
-                        <a href="/FE/Platform/SearchPopularity/Popularity.jsp">인기 순 조회</a>
+                        <a href="/BE/platform/repository/PartyNumRepository.jsp">인기 순 조회</a>
                         <a href="/FE/Platform/SearchExpensive/Expensive.jsp">플랫폼별 비교 조회</a>
                     </div>
                 </div>

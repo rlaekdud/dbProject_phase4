@@ -11,6 +11,14 @@
     width: 1728px;
     height: 1117px;
     position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.search-pname-rating .empty {
+    background-color: black;
+    width: 1728px;
+    height: 50px;
 }
 
 .search-popularity .overlap {
@@ -163,14 +171,42 @@
     position: absolute;
     width: 874px;
     height: 403px;
-    top: 336px;
+    top: 356px;
     left: 427px;
     border-radius: 5px;
+}
+
+table {
+    position: absolute;
+    width: 874px;
+    border-radius: 5px;
     border: 1px solid;
-    border-coler: #ffffff;
+    border-color: #ffffff;
     color: white;
-    border-collapse: collapse;
+
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+th {
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 17px;
+    text-align: center;
+    padding: 8px;
+}
+
+tr {
+    border: 1px solid #dddddd;
+}
+
+td {
     font-family: "Helvetica Neue-Medium", Helvetica;
+    font-size: 17px;
+    text-align: center;
+
+    border: 1px solid #ddd;
+    padding: 15px 30px;
 }
 
 .search-popularity .th {
@@ -287,7 +323,7 @@
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
-    max-width: 200;
+    max-width: 200px;
 }
 
 .dropdown-content a{

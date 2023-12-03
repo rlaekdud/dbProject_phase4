@@ -33,8 +33,17 @@
             <%
                 session = request.getSession();
                 String result = (String)session.getAttribute("result");
+                String genre = (String)session.getAttribute("genre");
+                String rating = (String)session.getAttribute("rating");
+                double d = Double.parseDouble(rating);
+                int temp = (int) d;
+                rating = Integer.toString(temp);
             %>
-            <div class="title">{장르명}의 {평점} 이상인 컨텐츠 조회</div>
+            <div class="title">
+                <%
+                    out.println(genre + " 장르의 " + rating + "점 이상인 컨텐츠 조회");
+                %>
+            </div>
             <div class="table">
                 <%
                     out.println(result);
@@ -74,7 +83,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">플랫폼 검색</button>
                     <div class="dropdown-content">
-                        <a href="/FE/Platform/SearchPopularity/Popularity.jsp">인기 순 조회</a>
+                        <a href="/BE/platform/repository/PartyNumRepository.jsp">인기 순 조회</a>
                         <a href="/FE/Platform/SearchExpensive/Expensive.jsp">플랫폼별 비교 조회</a>
                     </div>
                 </div>

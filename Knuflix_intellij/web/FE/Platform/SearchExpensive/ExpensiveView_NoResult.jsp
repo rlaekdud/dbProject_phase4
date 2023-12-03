@@ -30,7 +30,15 @@
                 </div>
             </div>
 
-            <div class="main-string">{플랫폼명}보다 가격 정책이 비싼 플랫폼이 없습니다.</div>
+            <%
+                session = request.getSession();
+                String pname = (String)session.getAttribute("pname");
+            %>
+            <div class="main-string">
+                <%
+                    out.println(pname + "보다 가격 정책이 비싼 플랫폼이 없습니다.");
+                %>
+            </div>
             <p class="subscribe-string">다른 플랫폼으로 검색해보세요.</p>
 
             <div class="search-my-party">
@@ -66,7 +74,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">플랫폼 검색</button>
                     <div class="dropdown-content">
-                        <a href="/FE/Platform/SearchPopularity/Popularity.jsp">인기 순 조회</a>
+                        <a href="/BE/platform/repository/PartyNumRepository.jsp">인기 순 조회</a>
                         <a href="/FE/Platform/SearchExpensive/Expensive.jsp">플랫폼별 비교 조회</a>
                     </div>
                 </div>

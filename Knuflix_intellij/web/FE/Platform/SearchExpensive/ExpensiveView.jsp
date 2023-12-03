@@ -29,12 +29,18 @@
                     </div>
                 </div>
             </div>
-            <div class="title">{플랫폼명}보다 가격 정책이 비싼 플랫폼</div>
-            <div class="desc-string">선택한 플랫폼보다 비싼 가격 정책을 가진 플랫폼을 조회합니다.</div>
+
             <%
                 session = request.getSession();
                 String result = (String)session.getAttribute("result");
+                String pname = (String)session.getAttribute("pname");
             %>
+            <div class="title">
+                <%
+                    out.println(pname + "보다 가격 정책이 비싼 플랫폼");
+                %>
+            </div>
+            <div class="desc-string">선택한 플랫폼보다 비싼 가격 정책을 가진 플랫폼을 조회합니다.</div>
             <div class="table">
                 <%
                     out.println(result);
@@ -75,7 +81,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">플랫폼 검색</button>
                     <div class="dropdown-content">
-                        <a href="/FE/Platform/SearchPopularity/Popularity.jsp">인기 순 조회</a>
+                        <a href="/BE/platform/repository/PartyNumRepository.jsp">인기 순 조회</a>
                         <a href="/FE/Platform/SearchExpensive/Expensive.jsp">플랫폼별 비교 조회</a>
                     </div>
                 </div>

@@ -11,6 +11,14 @@
     width: 1728px;
     height: 1117px;
     position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.my-party-fee .empty {
+    background-color: black;
+    width: 1728px;
+    height: 50px;
 }
 
 .my-party-fee .overlap {
@@ -117,11 +125,6 @@
     top: 431px;
     left: 116px;
     border-radius: 5px;
-    border: 1px solid;
-    border-coler: #ffffff;
-    color: white;
-    border-collapse: collapse;
-    font-family: "Helvetica Neue-Medium", Helvetica;
 }
 .my-party-fee .member-table {
     position: absolute;
@@ -130,21 +133,37 @@
     top: 431px;
     left: 934px;
     border-radius: 5px;
-    border: 1px solid;
-    border-coler: #ffffff;
-    color: white;
-    border-collapse: collapse;
-    font-family: "Helvetica Neue-Medium", Helvetica;
 }
 
-.my-party-fee .th {
+table {
+    position: absolute;
+    width: 664px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #ffffff;
+    color: white;
+
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+th {
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 17px;
     text-align: center;
     padding: 8px;
 }
 
-.my-party-fee .td {
+tr {
+    border: 1px solid #dddddd;
+}
+
+td {
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-size: 17px;
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 15px 30px;
 }
 
 .my-party-fee .sub-fee-string {
@@ -266,7 +285,7 @@
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
-    max-width: 200;
+    max-width: 200px;
 }
 
 .dropdown-content a{

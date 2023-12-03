@@ -31,7 +31,15 @@
             </div>
             <div class="title">플랫폼별 인기순 조회</div>
             <div class="desc-string">Knuflix에서 공유하고 있는 파티가 많은 순으로 조회합니다.</div>
-            <div class="table"></div>
+            <%
+                session = request.getSession();
+                String result = (String)session.getAttribute("result");
+            %>
+            <div class="table">
+                <%
+                    out.println(result);
+                %>
+            </div>
 
             <div class="search-my-party">
                 <div class="dropdown">
@@ -66,7 +74,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">플랫폼 검색</button>
                     <div class="dropdown-content">
-                        <a href="/FE/Platform/SearchPopularity/Popularity.jsp">인기 순 조회</a>
+                        <a href="/BE/platform/repository/PartyNumRepository.jsp">인기 순 조회</a>
                         <a href="/FE/Platform/SearchExpensive/Expensive.jsp">플랫폼별 비교 조회</a>
                     </div>
                 </div>
