@@ -46,9 +46,9 @@
         <div class="dropdown">
           <button class="dropbtn">내가 공유 중인 파티</button>
           <div class="dropdown-content">
-            <a href="/FE/MyParty/SearchMyPartyFee/MyPartyFee.jsp">내 파티 구독료 조회</a>
-            <a href="/FE/MyParty/SearchMySub/MySub.jsp">구독 중인 플랫폼 조회</a>
-            <a href="/FE/MyParty/SearchMyPInfo/MyPInfo.jsp">공유 중인 플랫폼 계정 정보 조회</a>
+            <a href="/BE/userSubInfo/repository/SubFeeRepository.jsp">내 파티 구독료 조회</a>
+            <a href="/BE/userSubInfo/repository/SubscribingPlatfromRepository.jsp">구독 중인 플랫폼 조회</a>
+            <a href="/BE/userSubInfo/repository/SubscribingPlatfromAccInfoRepository.jsp">공유 중인 플랫폼 계정 정보 조회</a>
           </div>
         </div>
       </div>

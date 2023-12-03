@@ -70,7 +70,7 @@
     font-family: "Helvetica Neue-Medium", Helvetica;
     font-weight: 500;
     color: #828282;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
@@ -85,7 +85,7 @@
     font-family: "Helvetica Neue-Medium", Helvetica;
     font-weight: 500;
     color: #db202c;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
@@ -96,7 +96,7 @@
     position: absolute;
     width: 332px;
     height: 169px;
-    top: 475px;
+    top: 435px;
     left: 697px;
 }
 
@@ -165,6 +165,7 @@
     left: 0;
     background-color: #db202c;
     border-radius: 5px;
+    border: none;
 }
 
 .my-account .next-button {
