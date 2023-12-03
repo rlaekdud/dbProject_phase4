@@ -8,6 +8,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "SELECT a.pltf_name AS Platform, COUNT(*) AS NUM " +
                     "FROM PARTY a, PLATFORM f " +
                     "WHERE a.pltf_name = f.pltf_name " +
@@ -31,7 +33,6 @@
         }
         result.append("</table>");
 
-        session = request.getSession();
         session.setAttribute("result", result.toString());
         response.sendRedirect("/FE/Platform/SearchPopularity/Popularity.jsp");
 
