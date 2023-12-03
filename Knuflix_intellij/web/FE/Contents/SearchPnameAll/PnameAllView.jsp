@@ -29,8 +29,6 @@
                     </div>
                 </div>
             </div>
-            <div class="title">{플랫폼명}의 모든 컨텐츠 조회</div>
-            <div class="table"></div>
 
             <div class="search-my-party">
                 <div class="dropdown">
@@ -70,8 +68,20 @@
                     </div>
                 </div>
             </div>
+
+            <%
+                session = request.getSession();
+                String result = (String)session.getAttribute("result");
+            %>
+            <div class="title">{플랫폼명}의 모든 컨텐츠 조회</div>
+            <div class="table">
+                <%
+                    out.println(result);
+                %>
+            </div>
         </div>
     </div>
+    <div class="empty"></div>
 </div>
 </body>
 </html>

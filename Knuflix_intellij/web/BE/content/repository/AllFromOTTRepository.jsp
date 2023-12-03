@@ -8,10 +8,10 @@
 <body>
 <%
     String serverIP = "localhost";
-    String strSID = "orcl";
-    String portNum = "1521";
-    String user = "seven";
-    String pass = "eleven";
+    String strSID = "xe";
+    String portNum = "11521";
+    String user = "platform";
+    String pass = "platform";
     String url = "jdbc:oracle:thin:@"+serverIP+":"+portNum+":"+strSID;
 
     String query = "SELECT C.Title, C.Rating, C.Genre, P.Pltf_name as Platform "
@@ -19,7 +19,7 @@
                 + "WHERE P.Pltf_name = S.Pltf_name "
                 + "AND S.Content_id = C.Content_id "
                 + "AND P.Pltf_name = ?";
-    String platform = request.getParameter("platform");
+    String platform = request.getParameter("pname");
 
     try {
         Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -53,9 +53,11 @@
             result.append("<td>").append(rs.getString(4)).append("</td>");
             result.append("</tr>");
         }
+        result.append("</table>");
 
-        request.setAttribute("result", result.toString());
-        request.getRequestDispatcher("/demo/FE/outputTest.jsp").forward(request, response);
+        session = request.getSession();
+        session.setAttribute("result", result.toString());
+        response.sendRedirect("/FE/Contents/SearchPnameAll/PnameAllView.jsp");
 
     } catch(SQLException e) {
         out.println("[Error] SQL error");
