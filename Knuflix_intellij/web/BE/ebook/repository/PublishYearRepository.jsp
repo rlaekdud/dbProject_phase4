@@ -8,6 +8,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "SELECT e.title, e.author_name AS Author, e.publisher, e.year, s.pltf_name AS Platform " +
                     "FROM EBOOK e, SERVE s " +
                     "WHERE e.book_id = s.book_id " +
@@ -33,7 +35,6 @@
         }
         result.append("</table>");
 
-        session = request.getSession();
         session.setAttribute("result", result.toString());
         response.sendRedirect("/FE/Ebook/SearchYear/Year.jsp");
 

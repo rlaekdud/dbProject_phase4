@@ -35,7 +35,9 @@ public class Repository {
     public PreparedStatement initPstmt(String query) {
         try {
             Connection conn = DriverManager.getConnection(url, id, pw);
-            pstmt = conn.prepareStatement(query);
+            pstmt = conn.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                                                    // TYPE_SCROLL_INSENSITIVE: ResultSet이 생성된 후에 데이터베이스에서 데이터가 변경되더라도 ResultSet에는 그 변경사항이 반영되지 않음
+                                                    // to use rs.previous()
         } catch(SQLException e) {
             out.println("[Error] SQL error");
         }
@@ -46,13 +48,20 @@ public class Repository {
         ResultSet rs = null;
         try {
             rs = pstmt.executeQuery();
-            ResultSetMetaData rsmd = rs.getMetaData();
-            int cnt = rsmd.getColumnCount();
 
-            result.append("<table border=\"1\">");
+            if (rs.next()) {
+                rs.previous();
 
-            for(int i = 1; i <= cnt; i++) {
-                result.append("<th>").append(rsmd.getColumnName(i)).append("</th>");
+                ResultSetMetaData rsmd = rs.getMetaData();
+                int cnt = rsmd.getColumnCount();
+
+                result.append("<table border=\"1\">");
+
+                for(int i = 1; i <= cnt; i++) {
+                    result.append("<th>").append(rsmd.getColumnName(i)).append("</th>");
+                }
+            } else {
+                return null;
             }
         } catch(SQLException e) {
             out.println("[Error] SQL error");

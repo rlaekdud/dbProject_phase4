@@ -8,6 +8,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "SELECT C.Title, C.Rating, C.Genre, P.Pltf_name as Platform "
                 + "FROM PLATFORM P, SHOW S, CONTENT C "
                 + "WHERE P.Pltf_name = S.Pltf_name "
@@ -37,7 +39,6 @@
         }
         result.append("</table>");
 
-        session = request.getSession();
         session.setAttribute("pname", pname);
 
         session.setAttribute("result", result.toString());

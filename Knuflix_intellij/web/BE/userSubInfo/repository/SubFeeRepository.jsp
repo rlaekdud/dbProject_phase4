@@ -13,6 +13,8 @@
     session = request.getSession();
 %>
 <%!
+    int total = 0;
+
     public StringBuilder subFeeRepo(String query) {
         Repository repository = new Repository();
         StringBuilder result = new StringBuilder();
@@ -25,6 +27,11 @@
             repository.setPstmt(pstmt);
 
             ResultSet rs = repository.getQueryResult();
+
+            if (rs == null) {   // no result
+                return null;
+            }
+
             result = repository.getResult();
 
             while(rs.next()) {
@@ -32,6 +39,7 @@
                 result.append("<td>").append(rs.getString(1)).append("</td>");
                 result.append("<td>").append(rs.getInt(2)).append("</td>");
                 result.append("</tr>");
+                total += rs.getInt(2);
             }
             result.append("</table>");
 
@@ -51,8 +59,6 @@
                     + "AND U.User_id = ?";
 
     StringBuilder resultL = subFeeRepo(queryL);
-
-    session.setAttribute("resultLeader", resultL.toString());
 %>
 <%--Member--%>
 <%
@@ -64,11 +70,25 @@
                     + "AND U.User_id = ?";
 
     StringBuilder resultM = subFeeRepo(queryM);
-
-    session.setAttribute("resultMember", resultM.toString());
 %>
 <%
-    response.sendRedirect("/FE/Platform/SearchPopularity/Popularity.jsp");
+    session.setAttribute("total", total);
+
+    if (resultL == null) {
+        if (resultM == null) {
+            response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_NoParty.jsp");       // no result
+        } else {
+            session.setAttribute("resultMember", resultM.toString());
+            response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_OnlyMember.jsp");    // no leader
+        }
+    } else if (resultM == null) {
+        session.setAttribute("resultLeader", resultL.toString());
+        response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_OnlyLeader.jsp");        // no member
+    } else {
+        session.setAttribute("resultLeader", resultL.toString());
+        session.setAttribute("resultMember", resultM.toString());
+        response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee.jsp");                   // basic flow
+    }
 %>
 </body>
 </html>

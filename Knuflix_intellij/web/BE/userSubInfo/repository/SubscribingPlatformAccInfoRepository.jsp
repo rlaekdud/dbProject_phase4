@@ -9,6 +9,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "SELECT Pltf_name, Pltf_acc_id, Pltf_acc_pw "
                 + "FROM PARTY "
                 + "WHERE Leader_id = ? "
@@ -27,21 +29,23 @@
 
         ResultSet rs = repository.getQueryResult();
 
-        StringBuilder result = repository.getResult();
+        if (rs == null) {
+            response.sendRedirect("/FE/MyParty/SearchMyPInfo/MyPInfo_NoShare.jsp");
+        } else {
+            StringBuilder result = repository.getResult();
 
-        while(rs.next()) {
-            result.append("<tr>");
-            result.append("<td>").append(rs.getString(1)).append("</td>");
-            result.append("<td>").append(rs.getString(2)).append("</td>");
-            result.append("<td>").append(rs.getString(3)).append("</td>");
-            result.append("</tr>");
+            while(rs.next()) {
+                result.append("<tr>");
+                result.append("<td>").append(rs.getString(1)).append("</td>");
+                result.append("<td>").append(rs.getString(2)).append("</td>");
+                result.append("<td>").append(rs.getString(3)).append("</td>");
+                result.append("</tr>");
+            }
+            result.append("</table>");
+
+            session.setAttribute("result", result.toString());
+            response.sendRedirect("/FE/MyParty/SearchMyPInfo/MyPInfo.jsp");
         }
-        result.append("</table>");
-
-        session = request.getSession();
-        session.setAttribute("result", result.toString());
-        response.sendRedirect("/FE/MyParty/SearchMyPInfo/MyPInfo.jsp");
-
     } catch(SQLException e) {
         out.println("[Error] SQL error");
     }
