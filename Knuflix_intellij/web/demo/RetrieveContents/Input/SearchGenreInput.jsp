@@ -9,7 +9,7 @@
 <body>
     <h1> [ KNUFLIX ]</h1>
     <h2>Contents Inquiry</h2>
-    <form action="/RetrieveContents/View/SearchGenreView.jsp">
+    <form action="/RetrieveContents/FE/SearchGenreView.jsp">
         <label for="genre">Genre : </label>
         <select name="genre" id="genre">
             <option value="Horror" selected>Horror</option>

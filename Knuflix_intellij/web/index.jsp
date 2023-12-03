@@ -13,7 +13,7 @@
 <body>
 Success.
   <%
-    response.sendRedirect("/View/Home/Home.jsp");
+    response.sendRedirect("/FE/Home/Home.jsp");
   %>
 </body>
 </html>

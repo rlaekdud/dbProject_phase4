@@ -16,7 +16,7 @@
 <div class="sign-up">
     <div class="overlap-wrapper">
         <div class="overlap">
-            <a href="/View/Home/Home.jsp"><img class="main-logo" src="/img/main-logo.png" /></a>
+            <a href="/FE/Home/Home.jsp"><img class="main-logo" src="/img/main-logo.png" /></a>
             <div class="background-poster">
                 <img class="poster" src="/img/poster-2.png" />
                 <img class="img" src="/img/poster-4.png" />
@@ -39,7 +39,7 @@
                     <div class="go-sign-in">
                         <div class="overlap-2">
                             <div class="text-wrapper-4">이미 계정이 있으신가요?</div>
-                            <a href="/View/SignIn/SignIn.jsp"><div class="text-wrapper-5">지금 로그인하세요.</div></a>
+                            <a href="/FE/SignIn/SignIn.jsp"><div class="text-wrapper-5">지금 로그인하세요.</div></a>
                         </div>
                     </div>
                 </div>
