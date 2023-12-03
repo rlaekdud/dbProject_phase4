@@ -36,7 +36,7 @@
             <div class="genre-string">장르를 선택하세요.</div>
             <div class="rating-string">평점을 선택하세요.</div>
             <div class="input-form">
-                <form action="GenreRatingView.jsp">
+                <form action="/BE/content/repository/GenreRatingRepository.jsp">
                     <select class="genre-input" id="genre" name="genre">
                         <option value="Horror" selected>Horror+</option>
                         <option value="Romcom">Romcom</option>
