@@ -9,6 +9,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "SELECT Pltf_name, Pltf_acc_id, Pltf_acc_pw "
                 + "FROM PARTY "
                 + "WHERE Leader_id = ? "
@@ -27,6 +29,10 @@
 
         ResultSet rs = repository.getQueryResult();
 
+        if (rs == null) {
+            response.sendRedirect("/FE/MyParty/SearchMyPInfo/MyPInfo_NoShare.jsp");
+        }
+
         StringBuilder result = repository.getResult();
 
         while(rs.next()) {
@@ -38,7 +44,6 @@
         }
         result.append("</table>");
 
-        session = request.getSession();
         session.setAttribute("result", result.toString());
         response.sendRedirect("/FE/MyParty/SearchMyPInfo/MyPInfo.jsp");
 

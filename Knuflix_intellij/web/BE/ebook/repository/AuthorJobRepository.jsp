@@ -8,6 +8,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "SELECT e.title, e.author_name AS Author, e.publisher, e.year, s.pltf_name AS Platform " +
                     "FROM EBOOK e, SERVE s " +
                     "WHERE e.author_name IN (SELECT a.name " +
@@ -26,6 +28,10 @@
 
         ResultSet rs = repository.getQueryResult();
 
+        if (rs == null) {
+            response.sendRedirect("/FE/Ebook/SearchAuthorJob/AuthorJobView_NoSuchJob.jsp");
+        }
+
         StringBuilder result = repository.getResult();
 
         while(rs.next()) {
@@ -39,7 +45,6 @@
         }
         result.append("</table>");
 
-        session = request.getSession();
         session.setAttribute("job", job);
         session.setAttribute("result", result.toString());
         response.sendRedirect("/FE/Ebook/SearchAuthorJob/AuthorJobView.jsp");

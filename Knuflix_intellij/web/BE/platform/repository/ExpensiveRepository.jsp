@@ -8,6 +8,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "SELECT pltf_name AS Platform, sub_price " +
                     "FROM PLATFORM " +
                     "WHERE sub_price > (SELECT sub_price " +
@@ -24,6 +26,10 @@
 
         ResultSet rs = repository.getQueryResult();
 
+        if (rs == null) {
+            response.sendRedirect("/FE/Platform/SearchExpensive/ExpensiveView_NoResult.jsp");
+        }
+
         StringBuilder result = repository.getResult();
 
         while(rs.next()) {
@@ -34,7 +40,6 @@
         }
         result.append("</table>");
 
-        session = request.getSession();
         session.setAttribute("pname", pname);
         session.setAttribute("result", result.toString());
         response.sendRedirect("/FE/Platform/SearchExpensive/ExpensiveView.jsp");

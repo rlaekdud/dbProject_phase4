@@ -9,6 +9,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "SELECT Pltf_name AS Platform, Sub_price "
                 + "FROM PARTY NATURAL JOIN PLATFORM "
                 + "WHERE leader_id = ? "
@@ -27,6 +29,10 @@
 
         ResultSet rs = repository.getQueryResult();
 
+        if (rs == null) {
+            response.sendRedirect("/FE/MyParty/SearchMySub/MySub_NoSub.jsp");
+        }
+
         StringBuilder result = new StringBuilder();
 
         while(rs.next()) {
@@ -37,7 +43,6 @@
         }
         result.append("</table>");
 
-        session = request.getSession();
         session.setAttribute("result", result.toString());
         response.sendRedirect("/FE/MyParty/SearchMySub/MySub.jsp");
 

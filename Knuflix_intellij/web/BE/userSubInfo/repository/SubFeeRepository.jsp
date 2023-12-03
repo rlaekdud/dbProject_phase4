@@ -25,6 +25,11 @@
             repository.setPstmt(pstmt);
 
             ResultSet rs = repository.getQueryResult();
+
+            if (rs == null) {   // no result
+                return null;
+            }
+
             result = repository.getResult();
 
             while(rs.next()) {
@@ -51,8 +56,6 @@
                     + "AND U.User_id = ?";
 
     StringBuilder resultL = subFeeRepo(queryL);
-
-    session.setAttribute("resultLeader", resultL.toString());
 %>
 <%--Member--%>
 <%
@@ -64,11 +67,22 @@
                     + "AND U.User_id = ?";
 
     StringBuilder resultM = subFeeRepo(queryM);
-
-    session.setAttribute("resultMember", resultM.toString());
 %>
 <%
-    response.sendRedirect("/FE/Platform/SearchPopularity/Popularity.jsp");
+    if (resultL == null) {
+        if (resultM == null) {
+            response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_NoParty.jsp");   // no result
+        }
+        session.setAttribute("resultMember", resultM.toString());
+        response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_OnlyMember.jsp");    // no leader
+    } else if (resultM == null) {
+        session.setAttribute("resultLeader", resultL.toString());
+        response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_OnlyLeader.jsp");    // no member
+    }
+
+    session.setAttribute("resultLeader", resultL.toString());
+    session.setAttribute("resultMember", resultM.toString());
+    response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee.jsp");
 %>
 </body>
 </html>
