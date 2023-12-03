@@ -1,0 +1,331 @@
+.home-loggedin {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-loggedin .div {
+    background-color: #000000;
+    width: 1728px;
+    height: 1117px;
+    position: relative;
+}
+
+.home-loggedin .overlap {
+    top: 46px;
+    position: absolute;
+    width: 1728px;
+    height: 739px;
+    left: 0;
+}
+
+.home-loggedin .overlap-group {
+    top: 0;
+    position: absolute;
+    width: 1728px;
+    height: 739px;
+    left: 0;
+}
+
+.home-loggedin .main-logo {
+    position: absolute;
+    width: 164px;
+    height: 57px;
+    top: 0;
+    left: 41px;
+    object-fit: cover;
+}
+
+.home-loggedin .background-poster {
+    position: absolute;
+    width: 1728px;
+    height: 690px;
+    top: 49px;
+    left: 0;
+    opacity: 0.7;
+}
+
+.home-loggedin .poster {
+    position: absolute;
+    width: 298px;
+    height: 690px;
+    top: 0;
+    left: 1430px;
+    object-fit: cover;
+}
+
+.home-loggedin .img {
+    position: absolute;
+    width: 298px;
+    height: 690px;
+    top: 0;
+    left: 1079px;
+    object-fit: cover;
+}
+
+.home-loggedin .poster-2 {
+    position: absolute;
+    width: 299px;
+    height: 690px;
+    top: 0;
+    left: 728px;
+    object-fit: cover;
+}
+
+.home-loggedin .poster-3 {
+    position: absolute;
+    width: 298px;
+    height: 690px;
+    top: 0;
+    left: 378px;
+    object-fit: cover;
+}
+
+.home-loggedin .poster-4 {
+    position: absolute;
+    width: 327px;
+    height: 690px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.home-loggedin .text-wrapper {
+    position: absolute;
+    width: 1317px;
+    top: 379px;
+    left: 205px;
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 60px;
+    white-space: nowrap;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-loggedin .my-account-button {
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: -5px;
+    left: 1629px;
+}
+
+.home-loggedin .user-icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.home-loggedin .polygon {
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    top: 12px;
+    left: 26px;
+}
+
+.home-loggedin .search-my-party {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+    left: 236px;
+}
+
+.home-loggedin .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-loggedin .search-contents {
+    left: 418px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+}
+
+.home-loggedin .search-ebook {
+    left: 579px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+}
+
+.home-loggedin .search-platform {
+    left: 713px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+}
+
+.home-loggedin .OTT-logo {
+    position: absolute;
+    width: 1030px;
+    height: 107px;
+    top: 917px;
+    left: 339px;
+}
+
+.home-loggedin .netflix-logo {
+    position: absolute;
+    width: 220px;
+    height: 71px;
+    top: 18px;
+    left: 0;
+    object-fit: cover;
+}
+
+.home-loggedin .TVING-logo {
+    position: absolute;
+    width: 82px;
+    height: 79px;
+    top: 15px;
+    left: 483px;
+    object-fit: cover;
+}
+
+.home-loggedin .watcha-logo {
+    position: absolute;
+    width: 226px;
+    height: 81px;
+    top: 13px;
+    left: 587px;
+    object-fit: cover;
+}
+
+.home-loggedin .disney-logo {
+    position: absolute;
+    width: 157px;
+    height: 107px;
+    top: 0;
+    left: 273px;
+    object-fit: cover;
+}
+
+.home-loggedin .wavve-logo {
+    position: absolute;
+    width: 216px;
+    height: 67px;
+    top: 18px;
+    left: 814px;
+    object-fit: cover;
+}
+
+.dropdown{
+    position : relative;
+    display : inline-block;
+}
+
+.dropbtn{
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+.dropdown-content{
+    display : none;
+    z-index : 1; /*다른 요소들보다 앞에 배치*/
+    position: relative;
+
+    width: fit-content;
+    margin-top: -1px;
+    left: -20px;
+    top: 7px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    max-width: 200;
+}
+
+.dropdown-content a{
+    display : block;
+    text-decoration : none;
+    color : rgb(163, 163, 163);
+    font-size: 12px;
+    padding : 12px 20px;
+}
+
+.dropdown-content a:hover{
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content1{
+    display : none;
+    z-index : 1; /*다른 요소들보다 앞에 배치*/
+    position: relative;
+
+    width: fit-content;
+    margin-top: -1px;
+    left: -35px;
+    top: 30px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 400;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dropdown-content1 a{
+    display : block;
+    text-decoration : none;
+    color : rgb(163, 163, 163);
+    font-size: 12px;
+    padding : 12px 20px;
+}
+
+.dropdown-content1 a:hover{
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content1 {
+    display: block;
+}

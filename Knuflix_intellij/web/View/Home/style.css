@@ -1,0 +1,245 @@
+.home-first {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-first .div {
+    background-color: #000000;
+    width: 1728px;
+    height: 1117px;
+    position: relative;
+}
+
+.home-first .overlap {
+    top: 46px;
+    position: absolute;
+    width: 1728px;
+    height: 739px;
+    left: 0;
+}
+
+.home-first .overlap-group {
+    top: 0;
+    position: absolute;
+    width: 1728px;
+    height: 739px;
+    left: 0;
+}
+
+.home-first .main-logo {
+    position: absolute;
+    width: 164px;
+    height: 57px;
+    top: 0;
+    left: 41px;
+    object-fit: cover;
+}
+
+.home-first .background-poster {
+    position: absolute;
+    width: 1728px;
+    height: 690px;
+    top: 49px;
+    left: 0;
+    opacity: 0.7;
+}
+
+.home-first .poster {
+    position: absolute;
+    width: 298px;
+    height: 690px;
+    top: 0;
+    left: 1430px;
+    object-fit: cover;
+}
+
+.home-first .img {
+    position: absolute;
+    width: 298px;
+    height: 690px;
+    top: 0;
+    left: 1079px;
+    object-fit: cover;
+}
+
+.home-first .poster-2 {
+    position: absolute;
+    width: 299px;
+    height: 690px;
+    top: 0;
+    left: 728px;
+    object-fit: cover;
+}
+
+.home-first .poster-3 {
+    position: absolute;
+    width: 298px;
+    height: 690px;
+    top: 0;
+    left: 378px;
+    object-fit: cover;
+}
+
+.home-first .poster-4 {
+    position: absolute;
+    width: 327px;
+    height: 690px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.home-first .go-sign-up {
+    width: 218px;
+    height: 72px;
+    top: 667px;
+    left: 755px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    background-color: #db202c;
+    border-radius: 5px;
+}
+
+.home-first .text-wrapper {
+    position: relative;
+    width: fit-content;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-first .p {
+    position: absolute;
+    width: 1317px;
+    top: 375px;
+    left: 205px;
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.home-first .text-wrapper-2 {
+    position: absolute;
+    width: 743px;
+    top: 479px;
+    left: 492px;
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.home-first .text-wrapper-3 {
+    position: absolute;
+    width: 1050px;
+    top: 551px;
+    left: 339px;
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-first .go-sign-in {
+    width: 70px;
+    height: 31px;
+    top: 13px;
+    left: 1614px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    background-color: #db202c;
+    border-radius: 5px;
+}
+
+.home-first .text-wrapper-4 {
+    position: relative;
+    width: fit-content;
+    margin-top: -4.5px;
+    margin-bottom: -2.5px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 15px;
+    white-space: nowrap;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-first .OTT-logo {
+    position: absolute;
+    width: 1030px;
+    height: 107px;
+    top: 917px;
+    left: 339px;
+}
+
+.home-first .netflix-logo {
+    position: absolute;
+    width: 220px;
+    height: 71px;
+    top: 18px;
+    left: 0;
+    object-fit: cover;
+}
+
+.home-first .tving-logo {
+    position: absolute;
+    width: 82px;
+    height: 79px;
+    top: 15px;
+    left: 483px;
+    object-fit: cover;
+}
+
+.home-first .watcha-logo {
+    position: absolute;
+    width: 226px;
+    height: 81px;
+    top: 13px;
+    left: 587px;
+    object-fit: cover;
+}
+
+.home-first .disney-logo {
+    position: absolute;
+    width: 157px;
+    height: 107px;
+    top: 0;
+    left: 273px;
+    object-fit: cover;
+}
+
+.home-first .wavve-logo {
+    position: absolute;
+    width: 216px;
+    height: 67px;
+    top: 18px;
+    left: 814px;
+    object-fit: cover;
+}
