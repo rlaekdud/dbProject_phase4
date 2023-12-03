@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="repository.Repository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,43 +8,23 @@
 </head>
 <body>
 <%
-    String serverIP = "localhost";
-    String strSID = "orcl";
-    String portNum = "1521";
-    String user = "seven";
-    String pass = "eleven";
-    String url = "jdbc:oracle:thin:@"+serverIP+":"+portNum+":"+strSID;
-
     String query = "SELECT pltf_name AS Platform, sub_price " +
                     "FROM PLATFORM " +
                     "WHERE sub_price > (SELECT sub_price " +
                                         "FROM PLATFORM " +
                                         "WHERE pltf_name = ?)";
-    String platform = request.getParameter("platform");
+    String pname = request.getParameter("pname");
+
+    Repository repository = new Repository();
 
     try {
-        Class.forName("oracle.jdbc.driver.OracleDriver");
-    } catch (ClassNotFoundException e) {
-        throw new RuntimeException(e);
-    }
+        PreparedStatement pstmt = repository.initPstmt(query);
+        pstmt.setString(1, pname);
+        repository.setPstmt(pstmt);
 
-    try {
-        Connection conn = DriverManager.getConnection(url, user, pass);
+        ResultSet rs = repository.getQueryResult();
 
-        PreparedStatement pstmt = conn.prepareStatement(query);
-        pstmt.setString(1, platform);
-
-        ResultSet rs = pstmt.executeQuery();
-        ResultSetMetaData rsmd = rs.getMetaData();
-        int cnt = rsmd.getColumnCount();
-
-        StringBuilder result = new StringBuilder();
-
-        result.append("<table border=\"1\">");
-
-        for(int i = 1; i <= cnt; i++) {
-            result.append("<th>").append(rsmd.getColumnName(i)).append("</th>");
-        }
+        StringBuilder result = repository.getResult();
 
         while(rs.next()) {
             result.append("<tr>");
@@ -51,9 +32,12 @@
             result.append("<td>").append(rs.getString(2)).append("</td>");
             result.append("</tr>");
         }
+        result.append("</table>");
 
-        request.setAttribute("result", result.toString());
-        request.getRequestDispatcher("/demo/FE/outputTest.jsp").forward(request, response);
+        session = request.getSession();
+        session.setAttribute("pname", pname);
+        session.setAttribute("result", result.toString());
+        response.sendRedirect("/FE/Platform/SearchExpensive/ExpensiveView.jsp");
 
     } catch(SQLException e) {
         out.println("[Error] SQL error");

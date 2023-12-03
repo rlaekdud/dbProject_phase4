@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="repository.Repository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +8,6 @@
 </head>
 <body>
 <%
-    String serverIP = "localhost";
-    String strSID = "orcl";
-    String portNum = "1521";
-    String user = "seven";
-    String pass = "eleven";
-    String url = "jdbc:oracle:thin:@"+serverIP+":"+portNum+":"+strSID;
-
     String query = "WITH GROUPS AS " +
                         "(SELECT * " +
                         "FROM CONTENT " +
@@ -26,30 +20,17 @@
     String genre = request.getParameter("genre");
     double rating = Double.parseDouble(request.getParameter("rating"));
 
-    try {
-        Class.forName("oracle.jdbc.driver.OracleDriver");
-    } catch (ClassNotFoundException e) {
-        throw new RuntimeException(e);
-    }
+    Repository repository = new Repository();
 
     try {
-        Connection conn = DriverManager.getConnection(url, user, pass);
-
-        PreparedStatement pstmt = conn.prepareStatement(query);
+        PreparedStatement pstmt = repository.initPstmt(query);
         pstmt.setString(1, genre);
         pstmt.setDouble(2, rating);
+        repository.setPstmt(pstmt);
 
-        ResultSet rs = pstmt.executeQuery();
-        ResultSetMetaData rsmd = rs.getMetaData();
-        int cnt = rsmd.getColumnCount();
+        ResultSet rs = repository.getQueryResult();
 
-        StringBuilder result = new StringBuilder();
-
-        result.append("<table border=\"1\">");
-
-        for(int i = 1; i <= cnt; i++) {
-            result.append("<th>").append(rsmd.getColumnName(i)).append("</th>");
-        }
+        StringBuilder result = repository.getResult();
 
         while(rs.next()) {
             result.append("<tr>");
@@ -58,9 +39,13 @@
             result.append("<td>").append(rs.getString(3)).append("</td>");
             result.append("</tr>");
         }
+        result.append("</table>");
 
-        request.setAttribute("result", result.toString());
-        request.getRequestDispatcher("/demo/FE/outputTest.jsp").forward(request, response);
+        session = request.getSession();
+        session.setAttribute("genre", genre);
+        session.setAttribute("rating", Double.toString(rating));
+        session.setAttribute("result", result.toString());
+        response.sendRedirect("/FE/Contents/SearchGenreRating/GenreRatingView.jsp");
 
     } catch(SQLException e) {
         out.println("[Error] SQL error");
