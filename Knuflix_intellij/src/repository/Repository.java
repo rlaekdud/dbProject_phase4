@@ -6,10 +6,10 @@ import java.sql.*;
 
 public class Repository {
     private final String serverIP = "localhost";
-    private final String strSID = "xe";
-    private final String portNum = "11521";
-    private final String id = "platform";
-    private final String pw = "platform";
+    private final String strSID = "orcl";
+    private final String portNum = "1521";
+    private final String id = "seven";
+    private final String pw = "eleven";
     private final String url = "jdbc:oracle:thin:@"+serverIP+":"+portNum+":"+strSID;
 
     private Connection conn;
@@ -70,13 +70,13 @@ public class Repository {
         return rs;
     }
 
-    public void execInsert(String query) {
+    public void execUpdate() {
         try {
-            conn = DriverManager.getConnection(url, id, pw);
-            Statement stmt = conn.createStatement();
-            stmt.executeUpdate(query);
+            pstmt.executeUpdate();
+            conn.commit();
+
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            out.println("[Error] SQL error");
         }
     }
 }

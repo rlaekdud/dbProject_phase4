@@ -37,7 +37,7 @@
             while(rs.next()) {
                 result.append("<tr>");
                 result.append("<td>").append(rs.getString(1)).append("</td>");
-                result.append("<td>").append(rs.getInt(2)).append("</td>");
+                result.append("<td>").append(rs.getInt(2)).append("원</td>");
                 result.append("</tr>");
                 total += rs.getInt(2);
             }

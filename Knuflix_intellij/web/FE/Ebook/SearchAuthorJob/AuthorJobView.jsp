@@ -18,7 +18,7 @@
 <div class="search-author-job">
     <div class="div">
         <div class="overlap">
-            <a href="/FE/Home/Home_SignedIn.jsp"><img class="main-logo" src="/img/main-logo.png" /></a>
+            <a href="/FE/Home/Home_SignIn.jsp"><img class="main-logo" src="/img/main-logo.png" /></a>
             <div class="my-account-button">
                 <div class="dropdown">
                     <button class="dropbtn"><img class="user-icon" src="/img/user-icon-1.png" /> <img class="polygon" src="/img/polygon-1.svg" /></button>
@@ -54,8 +54,8 @@
                     <button class="dropbtn">내가 공유 중인 파티</button>
                     <div class="dropdown-content">
                         <a href="/BE/userSubInfo/repository/SubFeeRepository.jsp">내 파티 구독료 조회</a>
-                        <a href="/BE/userSubInfo/repository/SubscribingPlatfromRepository.jsp">구독 중인 플랫폼 조회</a>
-                        <a href="/BE/userSubInfo/repository/SubscribingPlatfromAccInfoRepository.jsp">공유 중인 플랫폼 계정 정보 조회</a>
+                        <a href="/BE/userSubInfo/repository/SubscribingPlatformRepository.jsp">구독 중인 플랫폼 조회</a>
+                        <a href="/BE/userSubInfo/repository/SubscribingPlatformAccInfoRepository.jsp">공유 중인 플랫폼 계정 정보 조회</a>
                     </div>
                 </div>
             </div>

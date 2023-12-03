@@ -18,7 +18,7 @@
 <div class="my-account">
   <div class="div">
     <div class="overlap">
-      <a href="/FE/Home/Home_SignedIn.jsp"><img class="main-logo" src="/img/main-logo.png" /></a>
+      <a href="/FE/Home/Home_SignIn.jsp"><img class="main-logo" src="/img/main-logo.png" /></a>
       <div class="my-account-button">
         <div class="dropdown">
           <button class="dropbtn"><img class="user-icon" src="/img/user-icon-1.png" /> <img class="polygon" src="/img/polygon-1.svg" /></button>
@@ -33,7 +33,7 @@
       <div class="title">내 정보 수정</div>
       <div class="desc-string">비밀번호 변경만 가능합니다.</div>
       <div class="pw-box">
-        <form action="ModifyPw2.jsp">
+        <form action="/BE/ModifyPwService/ModifyPwService1.jsp">
           <button class="next-button" type="submit"><dev class="modify-pw-string">비밀번호 확인</dev></button>
           <div class="pw-input">
             <input class="input-field" type="password" placeholder="기존 비밀번호" id="formerPw" name="formerPw">
@@ -47,8 +47,8 @@
           <button class="dropbtn">내가 공유 중인 파티</button>
           <div class="dropdown-content">
             <a href="/BE/userSubInfo/repository/SubFeeRepository.jsp">내 파티 구독료 조회</a>
-            <a href="/BE/userSubInfo/repository/SubscribingPlatfromRepository.jsp">구독 중인 플랫폼 조회</a>
-            <a href="/BE/userSubInfo/repository/SubscribingPlatfromAccInfoRepository.jsp">공유 중인 플랫폼 계정 정보 조회</a>
+            <a href="/BE/userSubInfo/repository/SubscribingPlatformRepository.jsp">구독 중인 플랫폼 조회</a>
+            <a href="/BE/userSubInfo/repository/SubscribingPlatformAccInfoRepository.jsp">공유 중인 플랫폼 계정 정보 조회</a>
           </div>
         </div>
       </div>
