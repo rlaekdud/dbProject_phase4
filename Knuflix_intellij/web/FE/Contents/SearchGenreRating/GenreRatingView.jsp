@@ -29,8 +29,17 @@
                     </div>
                 </div>
             </div>
+
+            <%
+                session = request.getSession();
+                String result = (String)session.getAttribute("result");
+            %>
             <div class="title">{장르명}의 {평점} 이상인 컨텐츠 조회</div>
-            <div class="table"></div>
+            <div class="table">
+                <%
+                    out.println(result);
+                %>
+            </div>
 
             <div class="search-my-party">
                 <div class="dropdown">
@@ -72,6 +81,7 @@
             </div>
         </div>
     </div>
+    <div class="empty"></div>
 </div>
 </body>
 </html>

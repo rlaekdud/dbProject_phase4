@@ -8,11 +8,19 @@
 </head>
 <body>
 <%
+    String serverIP = "localhost";
+    String strSID = "xe";
+    String portNum = "11521";
+    String user = "platform";
+    String pass = "platform";
+    String url = "jdbc:oracle:thin:@"+serverIP+":"+portNum+":"+strSID;
+
     String query = "SELECT C.Title, C.Rating, C.Genre, P.Pltf_name as Platform "
                 + "FROM PLATFORM P, SHOW S, CONTENT C "
                 + "WHERE P.Pltf_name = S.Pltf_name "
                 + "AND S.Content_id = C.Content_id "
                 + "AND P.Pltf_name = ?";
+
     String pname = request.getParameter("pname");
 
     Repository repository = new Repository();
@@ -38,6 +46,7 @@
 
         session = request.getSession();
         session.setAttribute("pname", pname);
+
         session.setAttribute("result", result.toString());
         response.sendRedirect("/FE/Contents/SearchPnameAll/PnameAllView.jsp");
 
