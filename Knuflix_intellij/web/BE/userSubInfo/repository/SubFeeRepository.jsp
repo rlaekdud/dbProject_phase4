@@ -13,6 +13,8 @@
     session = request.getSession();
 %>
 <%!
+    int total = 0;
+
     public StringBuilder subFeeRepo(String query) {
         Repository repository = new Repository();
         StringBuilder result = new StringBuilder();
@@ -37,6 +39,7 @@
                 result.append("<td>").append(rs.getString(1)).append("</td>");
                 result.append("<td>").append(rs.getInt(2)).append("</td>");
                 result.append("</tr>");
+                total += rs.getInt(2);
             }
             result.append("</table>");
 
@@ -69,6 +72,8 @@
     StringBuilder resultM = subFeeRepo(queryM);
 %>
 <%
+    session.setAttribute("total", total);
+
     if (resultL == null) {
         if (resultM == null) {
             response.sendRedirect("/FE/MyParty/SearchMyPartyFee/MyPartyFee_NoParty.jsp");   // no result
