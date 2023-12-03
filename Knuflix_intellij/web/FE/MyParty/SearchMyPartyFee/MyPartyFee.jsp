@@ -36,6 +36,7 @@
                 session = request.getSession();
                 String resultLeader = (String)session.getAttribute("resultLeader");
                 String resultMember = (String)session.getAttribute("resultMember");
+                int total = (int)session.getAttribute("total");
             %>
             <div class="leader-table">
                 <%
@@ -47,7 +48,11 @@
                     out.println(resultMember);
                 %>
             </div>
-            <p class="sub-fee-string">이번 달의 구독료는 __원입니다.</p>
+            <p class="sub-fee-string">
+                <%
+                    out.println("이번 달의 구독료는 " + total + "원입니다.");
+                %>
+            </p>
 
             <div class="search-my-party">
                 <div class="dropdown">
