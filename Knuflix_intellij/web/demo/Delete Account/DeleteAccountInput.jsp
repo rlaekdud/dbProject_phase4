@@ -9,7 +9,7 @@
 <body>
     <h1><< KNUFLIX >></h1>
     <h2>Delete Account</h2>
-    <form action="/Knuflix_web/UserMenu/DeleteAccountView.jsp" method="post">
+    <form action="/UserMenu/DeleteAccountView.jsp" method="post">
         <label for="password"> Password : </label>
         <input type="password" name="password" id="password" required>
         <br><br>

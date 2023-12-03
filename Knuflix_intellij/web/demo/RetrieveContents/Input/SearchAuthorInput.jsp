@@ -9,7 +9,7 @@
 <body>
     <h1>[ KNUFLIX ]</h1>
     <h2>E-Book Inquiry</h2>
-    <form action="/Knuflix_web/RetrieveContents/View/SearchAuthorView.jsp">
+    <form action="/RetrieveContents/FE/SearchAuthorView.jsp">
         <label for="job"> Author Job : </label>
         <input type="text" name="job" id="job">
         <br><br>

@@ -9,7 +9,7 @@
 <body>
     <h1>[ KNUFLIX ]</h1>
     <h2>Contents Inquiry</h2>
-    <form action="/Knuflix_web/RetrieveContents/View/SearchPnameView.jsp">
+    <form action="/RetrieveContents/FE/SearchPnameView.jsp">
         <label for="pname"> Platform name : </label> 
         <select name="pname" id="pname">
             <option value="Disney+" selected>Disney+</option>
