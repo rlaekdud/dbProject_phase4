@@ -8,6 +8,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "WITH GROUPS AS " +
                         "(SELECT * " +
                         "FROM CONTENT " +
@@ -41,7 +43,6 @@
         }
         result.append("</table>");
 
-        session = request.getSession();
         session.setAttribute("genre", genre);
         session.setAttribute("rating", Double.toString(rating));
         session.setAttribute("result", result.toString());

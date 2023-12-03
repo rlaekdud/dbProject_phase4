@@ -8,6 +8,8 @@
 </head>
 <body>
 <%
+    session = request.getSession();
+
     String query = "SELECT c.title, c.genre, c.rating " +
                   "FROM CONTENT c " +
                   "WHERE c.content_id IN ((SELECT s.content_id " +
@@ -41,7 +43,6 @@
         }
         result.append("</table>");
 
-        session = request.getSession();
         session.setAttribute("pname", pname);
         session.setAttribute("rating", Double.toString(rating));
         session.setAttribute("result", result.toString());
