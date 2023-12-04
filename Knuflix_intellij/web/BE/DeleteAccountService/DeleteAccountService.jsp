@@ -29,7 +29,7 @@
             PreparedStatement pstmt = repository.initPstmt(query);
             pstmt.setString(1, UserDto.userID);
             repository.setPstmt(pstmt);
-            repository.exeUpdate();
+            repository.execUpdate();
             response.sendRedirect("/FE/Home/Home.jsp");
         } catch (SQLException e) {
             out.println("[Error] SQL error");

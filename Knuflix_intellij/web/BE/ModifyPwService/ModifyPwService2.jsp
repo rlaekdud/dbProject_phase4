@@ -33,7 +33,7 @@
             pstmt.setString(2, formerPw);
 
             repository.setPstmt(pstmt);
-            repository.exeUpdate();
+            repository.execUpdate();
             response.sendRedirect("/FE/Home/Home_SignIn.jsp");
 
         } catch (SQLException e) {

@@ -27,7 +27,7 @@
             <div class="sign-up-box">
                 <div class="overlap-group">
                     <div class="text-wrapper">회원 가입</div>
-                    <form action="SignUp2.jsp">
+                    <form action="/BE/user/controller/SignUp1Controller.jsp">
                         <button class="next-button" type="submit"><div class="div">계속</div></button>
                         <div class="id-input">
                             <input class="input-field" type="text" placeholder="아이디를 입력하세요." id="id" name="id">

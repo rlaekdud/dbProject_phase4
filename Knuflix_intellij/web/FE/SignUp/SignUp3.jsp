@@ -27,13 +27,13 @@
             <div class="sign-up-box">
                 <div class="overlap-group">
                     <div class="text-wrapper">결제 정보 입력</div>
-                    <form action="/FE/Home/Home.jsp">
+                    <form action="/BE/user/controller/SignUp3Controller.jsp">
                         <button class="next-button" type="submit"><div class="div">회원가입 완료</div></button>
                         <div class="id-input">
-                            <input class="input-field" type="text" placeholder="은행명" id="id" name="id">
+                            <input class="input-field" type="text" placeholder="은행명" id="bank" name="bank">
                         </div>
                         <div class="pw-input">
-                            <input class="input-field" type="text" placeholder="계좌번호" id="pw" name="pw">
+                            <input class="input-field" type="text" placeholder="계좌번호" id="accnum" name="accnum">
                         </div>
                     </form>
                     <div class="go-sign-in">

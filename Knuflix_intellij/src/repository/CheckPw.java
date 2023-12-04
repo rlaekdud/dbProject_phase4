@@ -5,18 +5,17 @@ import dto.UserDto;
 import java.sql.*;
 
 public class CheckPw {
-    UserDto user = null;
     Repository repository = new Repository();
 
     final String query = "SELECT pw FROM USERS WHERE user_id = ? ";
     public CheckPw(String id) {
-        user = new UserDto(id);
+        UserDto.userID = id;
     }
 
     public boolean checkMyPw(String pw) {
         try {
             PreparedStatement pstmt = repository.initPstmt(query);
-            pstmt.setString(1, user.userID);
+            pstmt.setString(1, UserDto.userID);
             repository.setPstmt(pstmt);
 
             ResultSet rs = repository.getQueryResult();
