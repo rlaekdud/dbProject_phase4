@@ -32,10 +32,10 @@
           <form action="/BE/user/controller/SignUp1Controller.jsp">
             <button class="next-button" type="submit"><div class="div">계속</div></button>
             <div class="id-input">
-              <input class="input-field" type="text" placeholder="아이디를 입력하세요." id="id" name="id">
+              <input class="input-field" type="text" placeholder="아이디" id="id" name="id">
             </div>
             <div class="pw-input">
-              <input class="input-field" type="password" placeholder="비밀번호를 입력하세요." id="pw" name="pw">
+              <input class="input-field" type="password" placeholder="비밀번호" id="pw" name="pw">
             </div>
           </form>
           <div class="go-sign-in">
