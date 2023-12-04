@@ -1,2 +1,5 @@
+1. git repository link
+ : https://github.com/rlaekdud/dbProject_phase4
 
-
+2. 기여도 그래프
+ : https://github.com/rlaekdud/dbProject_phase4/graphs/contributors
