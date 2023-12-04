@@ -45,6 +45,8 @@
             <p class="sub-fee-string">
                 <%
                     out.println("이번 달의 구독료는 " + total + "원입니다.");
+                    total = 0;
+                    session.setAttribute("total", total);
                 %>
             </p>
 

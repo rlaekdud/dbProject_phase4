@@ -14,6 +14,13 @@
 %>
 <%!
     int total = 0;
+%>
+<%
+    if(session.getAttribute("total") != null) {
+        total = (int) session.getAttribute("total");
+    }
+%>
+<%!
 
     public StringBuilder subFeeRepo(String query) {
         Repository repository = new Repository();
