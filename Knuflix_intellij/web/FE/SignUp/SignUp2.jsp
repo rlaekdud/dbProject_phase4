@@ -30,10 +30,10 @@
                     <form action="/BE/user/controller/SignUp2Controller.jsp">
                         <button class="next-button" type="submit"><div class="div">계속</div></button>
                         <div class="id-input">
-                            <input class="input-field" type="text" placeholder="이름을 입력하세요." id="name" name="name">
+                            <input class="input-field" type="text" placeholder="이름" id="name" name="name">
                         </div>
                         <div class="pw-input">
-                            <input class="input-field" type="text" placeholder="전화번호를 입력하세요." id="phone" name="phone">
+                            <input class="input-field" type="text" placeholder="전화번호(000-0000-0000)" id="phone" name="phone">
                         </div>
                     </form>
                     <div class="go-sign-in">
