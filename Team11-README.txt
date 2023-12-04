@@ -5,6 +5,7 @@
  - Tomcat v8.5사용
  - (Intellij) Project Structure → Modules → Dependencies
   - apache-tomcat-8.5.95\lib\ 안에 있는 servlet-api.jar 파일이랑 jsp-api.jar 파일 추가
+  - DB설정은 Repository.java 파일을 이용합니다.
 
 2. 기능 설명
  1. 회원가입 및 로그인
@@ -64,4 +65,6 @@
 
 4. Application 제작 환경
  - IntelliJ IDEA 23.2.5 에서 개발하였습니다. 
-  - eclipse 4.27.0 에서 개발 후 테스트를 진행하였습니다.
+
+5. 데모 동영상
+ : https://youtu.be/t_EPFNwnlf8
