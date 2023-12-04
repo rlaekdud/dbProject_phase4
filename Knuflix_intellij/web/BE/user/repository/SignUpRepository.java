@@ -29,8 +29,8 @@ public class SignUpRepository {
             PreparedStatement pstmt = repository.initPstmt(query);
             pstmt.setString(1, id);
             pstmt.setString(2, pw);
-            pstmt.setString(3, name);
-            pstmt.setString(4, phone);
+            pstmt.setString(3, phone);
+            pstmt.setString(4, name);
             pstmt.setString(5, bank);
             pstmt.setString(6, accnum);
             repository.setPstmt(pstmt);
