@@ -5,7 +5,7 @@
  - Tomcat v8.5사용
  - (Intellij) Project Structure → Modules → Dependencies
   - apache-tomcat-8.5.95\lib\ 안에 있는 servlet-api.jar 파일이랑 jsp-api.jar 파일 추가
-  - DB설정은 Repository.java 파일을 이용합니다.
+  - DB설정은 Knuflix_intellij/src/repository 경로의 Repository.java 파일을 이용합니다.
 
 2. 기능 설명
  1. 회원가입 및 로그인
