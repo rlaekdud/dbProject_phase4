@@ -1,0 +1,405 @@
+.search-expensive {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-expensive .div {
+    background-color: #000000;
+    width: 1728px;
+    height: 1117px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.search-expensive .empty {
+    background-color: black;
+    width: 1728px;
+    height: 50px;
+}
+
+.search-expensive .overlap {
+    top: 46px;
+    position: absolute;
+    width: 1728px;
+    height: 739px;
+    left: 0;
+}
+
+.search-expensive .overlap-group {
+    top: 0;
+    position: absolute;
+    width: 1728px;
+    height: 739px;
+    left: 0;
+}
+
+.search-expensive .main-logo {
+    position: absolute;
+    width: 164px;
+    height: 57px;
+    top: 0;
+    left: 41px;
+    object-fit: cover;
+}
+
+.search-expensive .background-poster {
+    position: absolute;
+    width: 1728px;
+    height: 690px;
+    top: 49px;
+    left: 0;
+    opacity: 0.7;
+}
+
+.search-expensive .img {
+    position: absolute;
+    width: 298px;
+    height: 690px;
+    top: 0;
+    left: 1079px;
+    object-fit: cover;
+}
+
+.search-expensive .title {
+    position: absolute;
+    width: 1317px;
+    top: 209px;
+    left: 205px;
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 60px;
+    white-space: nowrap;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.search-expensive .desc-string {
+    position: absolute;
+    width: 543px;
+    top: 285px;
+    left: 592px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 20px;
+    color: #929292;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.search-expensive .pname-string {
+    position: absolute;
+    width: 407px;
+    top: 448px;
+    left: 660px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.search-expensive .input-form {
+    position: absolute;
+    width: 634px;
+    height: 268px;
+    top: 459px;
+    left: 548px;
+}
+
+.search-expensive .pname-input {
+    position: absolute;
+    width: 532px;
+    height: 88px;
+    top: 20px;
+    left: 50px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #ffffff;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: transparent;
+
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-size: 22px;
+    text-align-last: center;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}
+.search-expensive .search-button {
+    display: flex;
+    width: 138px;
+    height: 61px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 167px;
+    left: 247px;
+    background-color: #db202c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    color: white;
+}
+
+.search-expensive .search-string {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 236px;
+}
+
+.search-expensive .table {
+    position: absolute;
+    width: 874px;
+    height: 403px;
+    top: 356px;
+    left: 427px;
+    border-radius: 5px;
+}
+
+table {
+    position: absolute;
+    width: 874px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #ffffff;
+    color: white;
+
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+th {
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 17px;
+    text-align: center;
+    padding: 8px;
+}
+
+tr {
+    border: 1px solid #dddddd;
+}
+
+td {
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-size: 17px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px 30px;
+}
+
+.search-expensive .th {
+    text-align: center;
+    padding: 8px;
+}
+
+.search-expensive .td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.search-expensive .my-account-button {
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: -5px;
+    left: 1629px;
+}
+
+.search-expensive .user-icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.search-expensive .polygon {
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    top: 12px;
+    left: 26px;
+}
+
+.search-expensive .search-my-party {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+    left: 236px;
+}
+
+.search-expensive .search-contents {
+    left: 418px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+}
+
+.search-expensive .search-ebook {
+    left: 579px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+}
+
+.search-expensive .search-platform {
+    left: 713px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+}
+
+.dropdown{
+    position : relative;
+    display : inline-block;
+}
+
+.dropbtn{
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+.dropdown-content{
+    display : none;
+    z-index : 1; /*다른 요소들보다 앞에 배치*/
+    position: relative;
+
+    width: fit-content;
+    margin-top: -1px;
+    left: -20px;
+    top: 7px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    max-width: 200px;
+}
+
+.dropdown-content a{
+    display : block;
+    text-decoration : none;
+    color : rgb(163, 163, 163);
+    font-size: 12px;
+    padding : 12px 20px;
+}
+
+.dropdown-content a:hover{
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content1{
+    display : none;
+    z-index : 1; /*다른 요소들보다 앞에 배치*/
+    position: relative;
+
+    width: fit-content;
+    margin-top: -1px;
+    left: -35px;
+    top: 30px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 400;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dropdown-content1 a{
+    display : block;
+    text-decoration : none;
+    color : rgb(163, 163, 163);
+    font-size: 12px;
+    padding : 12px 20px;
+}
+
+.dropdown-content1 a:hover{
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content1 {
+    display: block;
+}
+
+.search-expensive .main-string {
+    position: absolute;
+    width: 1317px;
+    top: 409px;
+    left: 205px;
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-weight: 700;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.search-expensive .subscribe-string {
+    position: absolute;
+    width: 487px;
+    top: 500px;
+    left: 620px;
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-weight: 500;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
