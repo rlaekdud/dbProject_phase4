@@ -27,6 +27,7 @@
         ResultSet rs = repository.getQueryResult();
 
         if (rs == null) {
+            session.setAttribute("pname", pname);
             response.sendRedirect("/FE/Platform/SearchExpensive/ExpensiveView_NoResult.jsp");
         } else {
             StringBuilder result = repository.getResult();
